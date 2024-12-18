@@ -1,0 +1,1 @@
+Para practicar todo lo visto en los formularios, se propone [el siguiente proyecto (ver enunciado en el README.md)](https://github.com/jihuertas/gestioncursos). El proyecto tiene dos ramas, la principal (main) con el enunciado y otra con la solución propuesta (solucionJI).
