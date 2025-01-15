@@ -51,6 +51,25 @@ from your_app_name.models import CustomUser
 ```
 
 ---
+### 5. **Actualiza formularios y administradores**
+Si estás usando el panel de administración de Django, es necesario personalizar la forma en que el modelo de usuario se administra. Puedes hacerlo creando un administrador personalizado:
+
+```python
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .models import CustomUser
+
+class CustomUserAdmin(UserAdmin):
+    model = CustomUser
+    fieldsets = UserAdmin.fieldsets + (
+        (None, {'fields': ('phone_number', 'birth_date')}),
+    )
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        (None, {'fields': ('phone_number', 'birth_date')}),
+    )
+
+admin.site.register(CustomUser, CustomUserAdmin)
+```
 
 ### Notas importantes
 - Es recomendable definir el modelo de usuario personalizado al inicio del proyecto. Cambiarlo después de haber ejecutado migraciones puede ser complejo (siempre puedes borrar las migraciones y eliminar la base de datos).
