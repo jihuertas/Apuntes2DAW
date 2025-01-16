@@ -81,3 +81,30 @@ Después del registro, el usuario será redirigido automáticamente a la página
 Si deseas agregar más campos, puedes extender `UserCreationForm` como en el ejemplo anterior, pero si solo necesitas lo básico, este método ya funciona perfectamente.
 
 ---
+
+### **IMPORTANTE: Si estás usando AbstractUser en tu modelo**
+En ese caso tienes que extender `UserCreationForm`. Para ello vamos a crear un nuevo formulario en `forms.py`:
+```python
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import get_user_model
+
+class EstudianteCreationForm(UserCreationForm):
+    class Meta:
+        model = get_user_model()  # Esto asegura que use tu modelo personalizado
+        fields = ('username', 'email', 'first_name', 'last_name')  # Ajusta los campos según tu modelo
+```
+ Y luego modificamos la vista `view.py` para que lo use:
+
+ ```python
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
+from .forms import EstudianteCreationForm
+
+class RegistroView(CreateView):
+    form_class = EstudianteCreationForm
+    template_name = 'registro.html'
+    success_url = reverse_lazy('login')  # Redirige al login después del registro
+```
+---
