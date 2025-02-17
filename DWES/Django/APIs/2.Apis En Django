@@ -1,0 +1,104 @@
+### Guía Paso a Paso para Integrar APIs en Proyectos Django
+
+#### Paso 1: Configuración Inicial del Proyecto Django
+
+1. **Crear un Proyecto Django**: Si aún no tienes un proyecto Django, puedes crear uno usando el siguiente comando:
+   ```bash
+   django-admin startproject myproject
+   cd myproject
+   ```
+
+2. **Crear una Aplicación Django**: Dentro de tu proyecto, crea una nueva aplicación:
+   ```bash
+   python manage.py startapp myapp
+   ```
+
+#### Paso 2: Instalar Librerías Necesarias
+
+En Django vamos a usar `django-rest-framework` para crear tus propias APIs.
+
+1. **Instalar `django-rest-framework`**:
+   ```bash
+   pip install djangorestframework
+   ```
+Es una buena práctica integrarla en tu `requirements.txt`del proyecto e instalarla con `pip install -r requirements.txt`
+2. **Agregar `rest_framework` a `INSTALLED_APPS`** en `settings.py`:
+   ```python
+   INSTALLED_APPS = [
+       ...
+       'rest_framework',
+       'myapp',
+   ]
+   ```
+
+2. **Configurar la URL**: Añade una ruta en `urls.py` para acceder a esta vista.
+
+   ```python
+   from django.urls import path
+   from .views import fetch_data_from_api
+
+   urlpatterns = [
+       path('fetch-data/', fetch_data_from_api, name='fetch_data'),
+   ]
+   ```
+
+#### Paso 4: Crear una API con Django Rest Framework
+
+1. **Definir un Modelo**: Define un modelo en `models.py` si aún no tienes uno.
+
+   ```python
+   from django.db import models
+
+   class Producto(models.Model):
+       nombre = models.CharField(max_length=100)
+       descripcion = models.TextField()
+   ```
+
+2. **Crear un Serializador**: Crea un archivo `serializers.py` y define un serializador para tu modelo.
+
+   ```python
+   from rest_framework import serializers
+   from .models import Producto
+
+   class ProductoSerializer(serializers.ModelSerializer):
+       class Meta:
+           model = Producto
+           fields = '__all__'
+   ```
+
+3. **Crear una Vista**: Define una vista en `views.py` para manejar las solicitudes a tu API.
+
+   ```python
+   from rest_framework import viewsets
+   from .models import Producto
+   from .serializers import ProductoSerializer
+
+   class ProductoViewSet(viewsets.ModelViewSet):
+       queryset = Producto.objects.all()
+       serializer_class = ProductoSerializer
+   ```
+
+4. **Configurar la URL**: Añade una ruta en `urls.py` para acceder a esta vista.
+
+   ```python
+   from django.urls import path, include
+   from rest_framework.routers import DefaultRouter
+   from .views import ProductoViewSet
+
+   router = DefaultRouter()
+   router.register(r'productos', ProductoViewSet)
+
+   urlpatterns = [
+       path('', include(router.urls)),
+   ]
+   ```
+
+#### Paso 5: Probar tu API
+
+1. **Ejecutar el Servidor**: Inicia el servidor de desarrollo de Django.
+   ```bash
+   python manage.py runserver
+   ```
+
+2. **Acceder a tu API**: Abre tu navegador y navega a `http://127.0.0.1:8000/productos/` para ver tu API en acción.
+
