@@ -89,7 +89,7 @@ Atajo típico:
 <a href="?{{ request.GET.urlencode }}&page={{ page_obj.next_page_number }}">Siguiente</a>
 ```
 
-*(Ojo: esto puede duplicar `page`; lo “fino” es quitar `page` antes.)*
+*(Ojo: esto puede duplicar `page`; lo “fino” es quitar `page` antes.) ¿Cómo se puede solucionar?*
 
 ---
 
