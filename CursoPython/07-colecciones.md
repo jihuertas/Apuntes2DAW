@@ -190,6 +190,242 @@ pares = [numero for numero in range(20) if numero % 2 == 0]
 
 Deben utilizarse cuando sigan siendo fáciles de leer.
 
+## Ejercicios con listas
+
+En estos ejercicios practicaremos el uso de **listas en Python**, combinándolas con estructuras condicionales y bucles.
+
+---
+
+### Ejercicio 1. Análisis de temperaturas
+
+Crea un programa que solicite al usuario las temperaturas registradas durante **7 días** y las almacene en una lista.
+
+Una vez introducidas todas las temperaturas, el programa debe mostrar:
+
+- La lista con todas las temperaturas.
+- La temperatura máxima.
+- La temperatura mínima.
+- La temperatura media.
+- Cuántos días tuvieron una temperatura superior a la media.
+- Cuántos días tuvieron una temperatura inferior a 10 °C.
+
+#### Ampliación
+
+Muestra también qué día de la semana tuvo la temperatura más alta.
+
+Puedes utilizar la siguiente lista:
+
+```python
+dias = [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+    "Domingo"
+]
+```
+
+---
+
+### Ejercicio 2. Lista de la compra
+
+Crea un programa para gestionar una lista de la compra.
+
+Comienza creando una lista vacía:
+
+```python
+compra = []
+```
+
+El programa debe solicitar productos al usuario y añadirlos a la lista.
+
+La introducción de productos terminará cuando el usuario escriba:
+
+```text
+fin
+```
+
+Una vez terminada la introducción de productos:
+
+1. Muestra la lista completa.
+2. Muestra el número de productos introducidos.
+3. Solicita al usuario el nombre de un producto que quiera eliminar.
+4. Si el producto existe, elimínalo de la lista.
+5. Si el producto no existe, muestra un mensaje indicándolo.
+6. Muestra finalmente la lista resultante.
+
+Ejemplo:
+
+```text
+Introduce un producto: Leche
+Introduce un producto: Pan
+Introduce un producto: Huevos
+Introduce un producto: Arroz
+Introduce un producto: fin
+
+Lista de la compra:
+['Leche', 'Pan', 'Huevos', 'Arroz']
+
+Producto que quieres eliminar: Pan
+
+Lista actualizada:
+['Leche', 'Huevos', 'Arroz']
+```
+
+#### Ampliación
+
+Modifica el programa para impedir que pueda introducirse dos veces el mismo producto.
+
+---
+
+### Ejercicio 3. Aprobados y suspensos
+
+Disponemos de la siguiente lista de notas:
+
+```python
+notas = [7.5, 4.2, 8.1, 3.7, 5.0, 9.3, 2.8, 6.4, 4.9, 7.2]
+```
+
+Crea dos listas vacías:
+
+```python
+aprobados = []
+suspensos = []
+```
+
+Recorre la lista `notas` y almacena:
+
+- En `aprobados` las notas iguales o superiores a `5`.
+- En `suspensos` las notas inferiores a `5`.
+
+Finalmente, el programa debe mostrar:
+
+- La lista de notas original.
+- La lista de aprobados.
+- La lista de suspensos.
+- El número de aprobados.
+- El número de suspensos.
+- El porcentaje de aprobados.
+- La nota media de la clase.
+
+Ejemplo de salida:
+
+```text
+Notas: [7.5, 4.2, 8.1, 3.7, 5.0, 9.3, 2.8, 6.4, 4.9, 7.2]
+
+Aprobados: [7.5, 8.1, 5.0, 9.3, 6.4, 7.2]
+Suspensos: [4.2, 3.7, 2.8, 4.9]
+
+Número de aprobados: 6
+Número de suspensos: 4
+Porcentaje de aprobados: 60.0 %
+Nota media: 5.91
+```
+
+#### Restricción
+
+Calcula la nota media recorriendo la lista.
+
+**No puedes utilizar `sum()`.**
+
+---
+
+### Ejercicio 4. Eliminar elementos duplicados
+
+Tenemos una lista con los identificadores de los alumnos que han accedido a una plataforma:
+
+```python
+accesos = [12, 7, 5, 12, 8, 7, 15, 5, 9, 12, 3, 8]
+```
+
+Un mismo alumno puede aparecer varias veces porque ha accedido a la plataforma en diferentes ocasiones.
+
+Crea una nueva lista llamada:
+
+```python
+usuarios = []
+```
+
+Esta lista debe contener cada identificador **una sola vez**, manteniendo el orden de su primera aparición.
+
+Para los datos anteriores, el resultado debería ser:
+
+```python
+[12, 7, 5, 8, 15, 9, 3]
+```
+
+El programa debe mostrar:
+
+- La lista original de accesos.
+- La lista de usuarios sin repetir.
+- El número total de accesos.
+- El número de usuarios diferentes.
+- El número de accesos repetidos.
+
+#### Restricción
+
+Debes resolver el ejercicio utilizando listas.
+
+**No puedes utilizar `set()`.**
+
+---
+
+### Ejercicio 5. Clasificación de un torneo
+
+Disponemos de dos listas:
+
+```python
+jugadores = ["Ana", "Luis", "Marta", "Pedro", "Lucía"]
+puntos = [125, 80, 150, 95, 110]
+```
+
+Las posiciones de ambas listas están relacionadas.
+
+Por ejemplo:
+
+- `Ana` tiene `125` puntos.
+- `Luis` tiene `80` puntos.
+- `Marta` tiene `150` puntos.
+- `Pedro` tiene `95` puntos.
+- `Lucía` tiene `110` puntos.
+
+El programa debe recorrer las listas y mostrar inicialmente:
+
+```text
+Ana - 125 puntos
+Luis - 80 puntos
+Marta - 150 puntos
+Pedro - 95 puntos
+Lucía - 110 puntos
+```
+
+A continuación debe determinar:
+
+- El jugador con mayor puntuación.
+- El jugador con menor puntuación.
+- La puntuación media.
+- Los jugadores que tienen una puntuación superior a la media.
+
+Finalmente, muestra una clasificación ordenada de mayor a menor puntuación:
+
+```text
+CLASIFICACIÓN
+
+1. Marta - 150 puntos
+2. Ana - 125 puntos
+3. Lucía - 110 puntos
+4. Pedro - 95 puntos
+5. Luis - 80 puntos
+```
+
+#### Reto
+
+Realiza la ordenación de los jugadores **sin utilizar `sort()` ni `sorted()`**.
+
+Para resolverlo tendrás que pensar cómo intercambiar elementos de las listas manteniendo la relación entre cada jugador y su puntuación.
+
 # Tuplas
 
 ## 14. Crear una tupla
@@ -374,242 +610,6 @@ for alumno in alumnos:
 - **Tupla**: secuencia ordenada que conceptualmente no debería cambiar.
 - **Conjunto**: valores únicos y operaciones de pertenencia/conjuntos.
 - **Diccionario**: información asociada a claves.
-
-# Ejercicios con listas
-
-En estos ejercicios practicaremos el uso de **listas en Python**, combinándolas con estructuras condicionales y bucles.
-
----
-
-## Ejercicio 1. Análisis de temperaturas
-
-Crea un programa que solicite al usuario las temperaturas registradas durante **7 días** y las almacene en una lista.
-
-Una vez introducidas todas las temperaturas, el programa debe mostrar:
-
-- La lista con todas las temperaturas.
-- La temperatura máxima.
-- La temperatura mínima.
-- La temperatura media.
-- Cuántos días tuvieron una temperatura superior a la media.
-- Cuántos días tuvieron una temperatura inferior a 10 °C.
-
-### Ampliación
-
-Muestra también qué día de la semana tuvo la temperatura más alta.
-
-Puedes utilizar la siguiente lista:
-
-```python
-dias = [
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
-    "Domingo"
-]
-```
-
----
-
-## Ejercicio 2. Lista de la compra
-
-Crea un programa para gestionar una lista de la compra.
-
-Comienza creando una lista vacía:
-
-```python
-compra = []
-```
-
-El programa debe solicitar productos al usuario y añadirlos a la lista.
-
-La introducción de productos terminará cuando el usuario escriba:
-
-```text
-fin
-```
-
-Una vez terminada la introducción de productos:
-
-1. Muestra la lista completa.
-2. Muestra el número de productos introducidos.
-3. Solicita al usuario el nombre de un producto que quiera eliminar.
-4. Si el producto existe, elimínalo de la lista.
-5. Si el producto no existe, muestra un mensaje indicándolo.
-6. Muestra finalmente la lista resultante.
-
-Ejemplo:
-
-```text
-Introduce un producto: Leche
-Introduce un producto: Pan
-Introduce un producto: Huevos
-Introduce un producto: Arroz
-Introduce un producto: fin
-
-Lista de la compra:
-['Leche', 'Pan', 'Huevos', 'Arroz']
-
-Producto que quieres eliminar: Pan
-
-Lista actualizada:
-['Leche', 'Huevos', 'Arroz']
-```
-
-### Ampliación
-
-Modifica el programa para impedir que pueda introducirse dos veces el mismo producto.
-
----
-
-## Ejercicio 3. Aprobados y suspensos
-
-Disponemos de la siguiente lista de notas:
-
-```python
-notas = [7.5, 4.2, 8.1, 3.7, 5.0, 9.3, 2.8, 6.4, 4.9, 7.2]
-```
-
-Crea dos listas vacías:
-
-```python
-aprobados = []
-suspensos = []
-```
-
-Recorre la lista `notas` y almacena:
-
-- En `aprobados` las notas iguales o superiores a `5`.
-- En `suspensos` las notas inferiores a `5`.
-
-Finalmente, el programa debe mostrar:
-
-- La lista de notas original.
-- La lista de aprobados.
-- La lista de suspensos.
-- El número de aprobados.
-- El número de suspensos.
-- El porcentaje de aprobados.
-- La nota media de la clase.
-
-Ejemplo de salida:
-
-```text
-Notas: [7.5, 4.2, 8.1, 3.7, 5.0, 9.3, 2.8, 6.4, 4.9, 7.2]
-
-Aprobados: [7.5, 8.1, 5.0, 9.3, 6.4, 7.2]
-Suspensos: [4.2, 3.7, 2.8, 4.9]
-
-Número de aprobados: 6
-Número de suspensos: 4
-Porcentaje de aprobados: 60.0 %
-Nota media: 5.91
-```
-
-### Restricción
-
-Calcula la nota media recorriendo la lista.
-
-**No puedes utilizar `sum()`.**
-
----
-
-## Ejercicio 4. Eliminar elementos duplicados
-
-Tenemos una lista con los identificadores de los alumnos que han accedido a una plataforma:
-
-```python
-accesos = [12, 7, 5, 12, 8, 7, 15, 5, 9, 12, 3, 8]
-```
-
-Un mismo alumno puede aparecer varias veces porque ha accedido a la plataforma en diferentes ocasiones.
-
-Crea una nueva lista llamada:
-
-```python
-usuarios = []
-```
-
-Esta lista debe contener cada identificador **una sola vez**, manteniendo el orden de su primera aparición.
-
-Para los datos anteriores, el resultado debería ser:
-
-```python
-[12, 7, 5, 8, 15, 9, 3]
-```
-
-El programa debe mostrar:
-
-- La lista original de accesos.
-- La lista de usuarios sin repetir.
-- El número total de accesos.
-- El número de usuarios diferentes.
-- El número de accesos repetidos.
-
-### Restricción
-
-Debes resolver el ejercicio utilizando listas.
-
-**No puedes utilizar `set()`.**
-
----
-
-## Ejercicio 5. Clasificación de un torneo
-
-Disponemos de dos listas:
-
-```python
-jugadores = ["Ana", "Luis", "Marta", "Pedro", "Lucía"]
-puntos = [125, 80, 150, 95, 110]
-```
-
-Las posiciones de ambas listas están relacionadas.
-
-Por ejemplo:
-
-- `Ana` tiene `125` puntos.
-- `Luis` tiene `80` puntos.
-- `Marta` tiene `150` puntos.
-- `Pedro` tiene `95` puntos.
-- `Lucía` tiene `110` puntos.
-
-El programa debe recorrer las listas y mostrar inicialmente:
-
-```text
-Ana - 125 puntos
-Luis - 80 puntos
-Marta - 150 puntos
-Pedro - 95 puntos
-Lucía - 110 puntos
-```
-
-A continuación debe determinar:
-
-- El jugador con mayor puntuación.
-- El jugador con menor puntuación.
-- La puntuación media.
-- Los jugadores que tienen una puntuación superior a la media.
-
-Finalmente, muestra una clasificación ordenada de mayor a menor puntuación:
-
-```text
-CLASIFICACIÓN
-
-1. Marta - 150 puntos
-2. Ana - 125 puntos
-3. Lucía - 110 puntos
-4. Pedro - 95 puntos
-5. Luis - 80 puntos
-```
-
-### Reto
-
-Realiza la ordenación de los jugadores **sin utilizar `sort()` ni `sorted()`**.
-
-Para resolverlo tendrás que pensar cómo intercambiar elementos de las listas manteniendo la relación entre cada jugador y su puntuación.
 
 # Práctica Final: gestión de alumnado
 
