@@ -25,7 +25,8 @@ Los ejemplos están pensados para Python 3 y pueden ejecutarse desde terminal, V
 - [13. Módulos y paquetes](13-modulos-paquetes.md)
 - [14. Programación orientada a objetos: fundamentos](14-poo-fundamentos.md)
 - [15. Programación orientada a objetos: herencia y composición](15-poo-avanzada.md)
-- [16. Proyecto final integrador](16-proyecto-final.md)
+- [16. Boletín de ejercicios](17-boletion_ejercicios.md)
+- [17. Proyecto final integrador](16-proyecto-final.md)
 
 
 ## Objetivos generales
