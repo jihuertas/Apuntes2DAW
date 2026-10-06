@@ -1,4 +1,4 @@
-# 16. Proyecto final integrador
+# 17. Proyecto final integrador
 
 ## Objetivo
 
@@ -386,7 +386,6 @@ objetos
 aplicación estructurada
 ```
 
-El siguiente paso natural puede ser continuar con bases de datos, testing, APIs o un framework web como Django.
 
 ---
 
