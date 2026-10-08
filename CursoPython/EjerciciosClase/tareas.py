@@ -22,10 +22,8 @@ def carga_datos():
             print("Datos cargados correctamente")
     except FileNotFoundError:
         print("No hay fichero con datos para cargar")
-        datos = []
     except json.JSONDecodeError:
         print("El fichero JSON está dañado")
-        datos = []
     
 def guarda_datos():
     with open(FICHDATA,'w', encoding='utf-8') as fichero:
