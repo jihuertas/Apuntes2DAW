@@ -120,7 +120,7 @@ Libro.objects.filter(disponible=False).delete()
 
 Sal del shell con `exit()`, vuelve a abrirlo y consulta los registros. Si siguen ahí, la información se ha persistido en la base de datos. También puedes abrir `db.sqlite3` con DB Browser for SQLite, preferiblemente con el shell cerrado.
 
-## Demostración guiada (45 min)
+## Demostración guiada 
 
 1. Abrir Django Shell e importar `Libro`, `date` y `Decimal`.
 2. Crear dos libros con ISBN diferentes.
@@ -130,7 +130,7 @@ Sal del shell con `exit()`, vuelve a abrirlo y consulta los registros. Si siguen
 6. Eliminar solo uno y comprobar el resultado.
 7. Cerrar y reabrir el shell para comprobar que los cambios permanecen.
 
-## Actividad 4. Gestión CRUD del catálogo (90 min)
+## Actividad 4. Gestión CRUD del catálogo 
 
 **Enunciado:** A partir del proyecto `biblioteca`, realiza las siguientes operaciones exclusivamente con el ORM desde Django Shell.
 
@@ -146,21 +146,5 @@ Sal del shell con `exit()`, vuelve a abrirlo y consulta los registros. Si siguen
 **Entrega:** archivo `actividad4_crud.py` con las instrucciones ejecutadas (o transcripción ordenada del shell) y capturas de la consulta final. Si se utiliza un script, ejecútalo dentro del contexto de Django, por ejemplo con `python manage.py shell < actividad4_crud.py`.
 
 **Preguntas:** ¿Qué diferencia hay entre `create()` y `save()`? ¿Qué ocurre al usar `get()` con un ISBN inexistente? ¿Qué riesgo tiene ejecutar `all().delete()`?
-
-## Distribución de las 3 horas
-
-| Fase | Tiempo |
-|---|---:|
-| Conceptos y explicación | 45 min |
-| Demostración guiada | 45 min |
-| Actividad autónoma y revisión | 90 min |
-
-## Comprobación de aprendizaje
-
-- [ ] Inserto registros con valores de tipos correctos.
-- [ ] Recupero un registro concreto y gestiono su ausencia.
-- [ ] Modifico información con `save()` y `update()`.
-- [ ] Elimino únicamente los registros previstos.
-- [ ] Compruebo que los cambios permanecen tras reiniciar el shell.
 
 **Siguiente bloque:** consultas ORM, filtrado, ordenación y agregaciones.
