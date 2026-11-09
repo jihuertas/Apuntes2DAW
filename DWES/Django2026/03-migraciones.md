@@ -1,8 +1,5 @@
 # UT4 · Bloque 3. Creación y aplicación de migraciones
 
-**Duración:** 2 horas  
-**Distribución:** Teoría (30 min), demostración (35 min), práctica (55 min).
-
 ## Objetivos
 
 - Comprender el propósito del sistema de migraciones de Django.
