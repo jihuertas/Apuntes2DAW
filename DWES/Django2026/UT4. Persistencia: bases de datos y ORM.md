@@ -1,7 +1,5 @@
 # UT4. Persistencia: bases de datos y ORM
 
-**Módulo:** Desarrollo Web en Entorno Servidor (DWES)  
-
 ## Descripción
 
 En esta unidad aprenderemos a gestionar la persistencia de información en aplicaciones web utilizando bases de datos relacionales y el sistema de mapeo objeto-relacional (ORM) de Django.
