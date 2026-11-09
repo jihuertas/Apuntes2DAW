@@ -1,8 +1,5 @@
 # Bloque 4. Operaciones CRUD y recuperación y modificación de información
 
-**UT4 · Persistencia: bases de datos y ORM**  
-**Duración:** 3 horas  
-**Requisitos:** bloques 1–3 completados; aplicación `catalogo` con modelos `Libro`, `Autor` y `Editorial` migrados.
 
 ## Objetivos
 
