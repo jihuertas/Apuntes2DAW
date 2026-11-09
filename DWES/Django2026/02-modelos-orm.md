@@ -1,8 +1,5 @@
 # UT4 · Bloque 2. Mapeo objeto-relacional y definición de modelos
 
-**Duración:** 3 horas  
-**Distribución:** Teoría (60 min), demostración (45 min), práctica (75 min).
-
 ## Objetivos
 
 - Comprender el mapeo objeto-relacional (ORM) de Django.
