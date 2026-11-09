@@ -1,8 +1,5 @@
 # Bloque 7. Integridad de datos y transacciones
 
-**UT4 · Persistencia: bases de datos y ORM**  
-**Duración:** 2 horas  
-**Requisitos:** proyecto `biblioteca` con modelos relacionados del bloque 6.
 
 ## Objetivos
 
@@ -158,7 +155,7 @@ if libro is not None:
 
 El error se captura **fuera** de `atomic()` para que la transacción detecte la excepción y se revierta.
 
-## Demostración guiada (35 min)
+## Demostración guiada
 
 1. Revisar las restricciones ya existentes (`unique`, relaciones y `on_delete`).
 2. Añadir la restricción de precio y migrarla.
@@ -166,7 +163,7 @@ El error se captura **fuera** de `atomic()` para que la transacción detecte la 
 4. Ejecutar una operación de préstamo válida.
 5. Simular un error y comprobar el rollback con `refresh_from_db()`.
 
-## Actividad 7. Préstamos e integridad (65 min)
+## Actividad 7. Préstamos e integridad
 
 **Enunciado:** Amplía la biblioteca para gestionar préstamos con operaciones consistentes.
 
@@ -183,20 +180,5 @@ El error se captura **fuera** de `atomic()` para que la transacción detecte la 
 
 **Preguntas:** ¿Por qué no basta con cambiar `disponible` sin crear el préstamo? ¿Qué diferencia existe entre validación de Django y restricción de base de datos? ¿Qué ocurre si una excepción sale del bloque `atomic()`?
 
-## Distribución de las 2 horas
-
-| Fase | Tiempo |
-|---|---:|
-| Explicación de integridad y transacciones | 20 min |
-| Demostración guiada | 35 min |
-| Actividad autónoma y revisión | 65 min |
-
-## Comprobación de aprendizaje
-
-- [ ] Reconozco las principales restricciones de integridad.
-- [ ] Creo y aplico migraciones de restricciones y modelos.
-- [ ] Agrupo cambios relacionados con `transaction.atomic()`.
-- [ ] Compruebo el rollback ante un error.
-- [ ] Distingo el comportamiento de SQLite y PostgreSQL en operaciones concurrentes.
 
 **Siguiente bloque:** panel de administración de Django.

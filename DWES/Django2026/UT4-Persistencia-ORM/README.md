@@ -11,7 +11,7 @@ Los materiales están organizados en diez bloques. Se recomienda seguir el orden
 | Bloque | Contenidos | Duración | Material |
 |---|---|---:|---|
 | 1 | Persistencia y bases de datos relacionales; configuración inicial de Django | [Acceder](01-persistencia-bases-datos.md) |
-| 2 | ORM, definición de modelos, tipos de campos y restricciones | Acceder](02-modelos-orm.md) |
+| 2 | ORM, definición de modelos, tipos de campos y restricciones | [Acceder](02-modelos-orm.md) |
 | 3 | Creación y aplicación de migraciones | [Acceder](03-migraciones.md) |
 | 4 | Operaciones CRUD; recuperación y modificación de información | [Acceder](04-operaciones-crud.md) |
 | 5 | Consultas ORM: filtrado, ordenación y agregación | [Acceder](05-consultas-orm.md) |
@@ -45,32 +45,6 @@ Los materiales están organizados en diez bloques. Se recomienda seguir el orden
 7. Desarrollo de aplicaciones que gestionen modelos relacionados de cierta complejidad.
 8. Configuración de proyectos Django con diferentes gestores de bases de datos.
 
-## Herramientas
-
-- Python y Django.
-- SQLite y PostgreSQL.
-- Visual Studio Code u otro editor.
-- DB Browser for SQLite (opcional).
-- Git y GitHub.
-
-## Organización del repositorio
-
-```text
-UT4-Persistencia-ORM/
-├── README.md
-├── 01-persistencia-bases-datos.md
-├── 02-modelos-orm.md
-├── 03-migraciones.md
-├── 04-operaciones-crud.md
-├── 05-consultas-orm.md
-├── 06-relaciones-modelos.md
-├── 07-integridad-transacciones.md
-├── 08-panel-administracion.md
-├── 09-gestores-bases-datos.md
-└── 10-practica-integradora.md
-```
-
-Todos los enlaces son relativos y funcionan cuando los archivos están en la misma carpeta del repositorio de GitHub.
 
 ## Proyecto de trabajo
 

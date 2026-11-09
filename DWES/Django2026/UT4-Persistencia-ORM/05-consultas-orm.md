@@ -1,8 +1,5 @@
 # Bloque 5. Consultas ORM: filtrado, ordenación y agregación
 
-**UT4 · Persistencia: bases de datos y ORM**  
-**Duración:** 3 horas  
-**Requisitos:** proyecto `biblioteca` con varios registros de `Libro` y bloques 1–4 completados.
 
 ## Objetivos
 
@@ -119,7 +116,7 @@ print(consulta.query)
 
 La salida permite relacionar el código ORM con la consulta SQL. No es necesario escribir SQL manualmente para resolver las actividades.
 
-## Demostración guiada (45 min)
+## Demostración guiada 
 
 1. Mostrar la diferencia entre `get()` y `filter()`.
 2. Buscar títulos por fragmentos y precios por rangos.
@@ -128,7 +125,7 @@ La salida permite relacionar el código ORM con la consulta SQL. No es necesario
 5. Calcular número de libros, precio medio y precio máximo.
 6. Agrupar por disponibilidad con `values().annotate()`.
 
-## Actividad 5. Boletín de consultas ORM (90 min)
+## Actividad 5. Boletín de consultas ORM 
 
 **Preparación:** utiliza al menos diez libros con títulos, fechas, precios y disponibilidades variadas. Si tu catálogo tiene menos registros, añade los necesarios mediante el ORM.
 
@@ -154,20 +151,6 @@ Resuelve las siguientes consultas **sin SQL directo**:
 
 **Preguntas:** ¿Por qué `filter()` no falla cuando no encuentra registros? ¿Qué diferencia existe entre `aggregate()` y `annotate()`? ¿Qué devuelve `values()`?
 
-## Distribución de las 3 horas
 
-| Fase | Tiempo |
-|---|---:|
-| Explicación de QuerySets, filtros y agregaciones | 45 min |
-| Demostración guiada | 45 min |
-| Boletín autónomo y corrección | 90 min |
-
-## Comprobación de aprendizaje
-
-- [ ] Distingo `get()` de `filter()`.
-- [ ] Uso operadores de búsqueda adecuados.
-- [ ] Ordeno y limito consultas.
-- [ ] Combino condiciones con `Q`.
-- [ ] Obtengo agregaciones y agrupaciones.
 
 **Siguiente bloque:** relaciones uno a uno, uno a muchos y muchos a muchos.
