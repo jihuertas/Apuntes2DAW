@@ -1,7 +1,5 @@
 # UT4 · Bloque 1. Persistencia de datos y bases de datos en Django
 
-**Duración:** 2 horas  
-**Distribución:** Teoría (40 min), demostración (35 min), práctica (45 min).
 
 ## Objetivos
 
