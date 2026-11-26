@@ -3,7 +3,7 @@
 **Módulo:** Desarrollo Web en Entorno Servidor (DWES)  
 **Curso:** 2.º DAW  
 **Unidad:** UT4. Persistencia: bases de datos y ORM  
-**Duración estimada:** 4 horas (ampliable a 6)  
+**Duración estimada:** 3 horas  
 **Tecnologías:** Python, Django, SQLite y PostgreSQL.
 
 ## 1. Introducción
@@ -285,20 +285,6 @@ musicfest/
 
 El `README.md` deberá explicar el objetivo, los requisitos de instalación, la configuración de la base de datos y los pasos para ejecutar el proyecto. Documenta las consultas, sus resultados y las evidencias de las pruebas de integridad y transacciones.
 
-## 14. Criterios de evaluación
 
-| Apartado | Puntuación |
-|---|---:|
-| Creación y configuración del proyecto | 0,5 |
-| Definición de modelos y tipos de campos | 1,0 |
-| Relaciones entre modelos | 1,0 |
-| Restricciones e integridad de los datos | 1,0 |
-| Migraciones y carga inicial de datos | 0,5 |
-| Operaciones CRUD | 1,0 |
-| Consultas mediante el ORM | 2,0 |
-| Transacciones | 1,5 |
-| Panel de administración | 1,0 |
-| Configuración de PostgreSQL | 0,5 |
-| **Total** | **10,0** |
 
 No se requiere desarrollar formularios, vistas basadas en clases ni una API REST, ya que corresponden a unidades posteriores.
